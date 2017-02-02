@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="randomApp">
+<head>
+  <title>RandomPick</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand">RandomPick</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" ng-controller="RandomPickControl">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>1시간만에 급조한 랜덤뽑기 [난수생성 : Math.floor(Math.random() * modular)]</h3>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-md-4">
+        <img class="img-responsive" ng-click="getGroup1Member()" src="/img/random.jpg">
+      </div>
+      <div class="col-md-4">
+        <img class="img-responsive" ng-click="getGroup2Member()" src="/img/random.jpg">
+      </div>
+      <div class="col-md-4">
+        <img class="img-responsive" ng-click="getGroup3Member()" src="/img/random.jpg">
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <div class="jumbotron" ng-click="RemoveName()">
+       <h1 class="text-center">{{target_name}}</h1>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="/js/custom.js"></script>
+</body>
+</html>
