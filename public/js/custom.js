@@ -15,6 +15,7 @@ randomApp.controller('RandomPickControl', function($scope, $interval) {
     };
 
     $scope.displayTargetName = function(name) {
+        /*
         $scope.target_name = 5;
         var timeout = $interval(function() {
             $scope.target_name--;
@@ -24,6 +25,9 @@ randomApp.controller('RandomPickControl', function($scope, $interval) {
                 $interval.cancel(timeout);
             }
         }, 1000);
+        */
+        /* 딜레이 없이 이름 바로 표시 */
+        $scope.target_name = name;
     };
 
     $scope.getGroup1Member = function() {
